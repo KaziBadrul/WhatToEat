@@ -1,0 +1,30 @@
+/*
+ COLORS 
+RED: #BD3B1B
+YELLOW: #D8A800
+LGREEN: #B9D870
+GREEN: #B6C61A
+DGREEN: #006344
+*/
+
+body,
+html {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-box {
+    text-align: center;
+    background-color: #BD3B1B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aliceblue;
+    height: 90vh;
+    border: 1px solid #BD3B1B;
+    border-radius: 15px;
+}

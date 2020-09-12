@@ -1,0 +1,40 @@
+{% block content %}
+<form action="#" method="POST">
+    <div>
+        <label for="">What do you prefer?</label>
+        <input type="radio" name="prefer" id="vegetarian" value="veg">Vegetarian
+        <input type="radio" name="prefer" value="non-vegetarian">Non-Vegetarian
+        <input type="radio" name="prefer" value="prefer-both">Prefer Both
+    </div>
+    <div>
+        <label for="">What are you in the mood for?</label>
+        <input type="radio" name="sweetness" value="sweet">Sweet
+        <input type="radio" name="sweetness" value="salty">Salty
+    </div>
+    <div>
+        <label for="">In for some Spice?</label>
+        <input type="radio" name="spicyness" value="less">I'm Afraid
+        <input type="radio" name="spicyness" value="moderate">Just a little
+        <input type="radio" name="spicyness" value="high">Give me all you have!
+    </div>
+    <div>
+        <label for="">Feeling a bit aware today?</label>
+        <input type="radio" name="healthy" value="healthy">Give me Healthy
+        <input type="radio" name="healthy" value="moderate">Moderate
+        <input type="radio" name="healthy" value="unhealthy">Give me Junk Foods
+    </div>
+    <div>
+        <label for="">Place you like the most?</label>
+        <input type="radio" name="place" value="cafe">Cafe
+        <input type="radio" name="place" value="restaurant">Restaurant
+        <input type="radio" name="place" value="diner">Diner
+    </div>
+    <div>
+        <label for="">Search within how many metres?</label>
+        <input type="number" name="range" id="range">
+    </div>
+    <div>
+        <input type="submit" value="Search Now!">
+    </div>
+</form>
+{% endblock content %}

@@ -1,0 +1,88 @@
+{% extends 'default.html' %} {% block style %}
+<link rel="stylesheet" href="static/form.css"> {% endblock style %} {% block content %}
+<div class="container main-box shadow-lg">
+    <h1>WhatToEat?</h1>
+    <form action="#" method="post">
+        <div class="form-group">
+            <label for="prefer">What do you prefer?</label>
+            <div class="row">
+                <div class="col-4">
+                    <input type="radio" name="prefer" value="vegetarian">
+                    <label for="vegetarian">Vegetarian</label>
+                </div>
+                <div class="col-4">
+                    <input type="radio" name="prefer" value="non-vegetarian">
+                    <label for="vegetarian">Non-Vegetarian</label>
+                </div>
+                <div class="col-4">
+                    <input type="radio" name="prefer" value="prefer-both" checked>
+                    <label for="vegetarian">Prefer Both</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="">What are you in a mood for?</label>
+            <div class="row justify-content-center">
+                <div class="btn-group btn-group-toggle col-12 m-2" data-toggle="buttons">
+                    <label class="btn btn-warning active border border-dark">
+                        <input type="radio" name="sweetness" value="sweet" autocomplete="off" checked> Sweet
+                      </label>
+                    <label class="btn btn-warning border border-dark">
+                        <input type="radio" name="sweetness" value="salty" autocomplete="off"> Salty
+                      </label>
+                </div>
+                <div class="btn-group btn-group-toggle col-12 m-2" data-toggle="buttons">
+                    <label class="btn btn-warning active border border-dark">
+                        <input type="radio" name="spicyness" value="less" autocomplete="off" checked> No Spice
+                      </label>
+                    <label class="btn btn-warning border border-dark">
+                        <input type="radio" name="spicyness" value="moderate" autocomplete="off"> Moderately Spicy
+                      </label>
+                    <label class="btn btn-warning border border-dark">
+                        <input type="radio" name="spicyness" value="high" autocomplete="off"> Extremely Spicy
+                      </label>
+                </div>
+                <div class="btn-group btn-group-toggle col-12 m-2" data-toggle="buttons">
+                    <label class="btn btn-warning active border border-dark">
+                        <input type="radio" name="healthy" value="healthy" autocomplete="off" checked> Healthy
+                      </label>
+                    <label class="btn btn-warning border border-dark">
+                        <input type="radio" name="healthy" value="moderate_healthy" autocomplete="off"> Moderate
+                      </label>
+                    <label class="btn btn-warning border border-dark">
+                        <input type="radio" name="healthy" value="unhealthy" autocomplete="off"> Junk Food
+                      </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <br>
+                <label for="">Place you like the most?</label>
+                <div class="btn-group btn-group-toggle col-12 m-2" data-toggle="buttons">
+                    <label class="btn btn-warning active border border-dark">
+                    <input type="radio" name="place" value="cafe" autocomplete="off" checked> Cafe
+                  </label>
+                    <label class="btn btn-warning border border-dark">
+                    <input type="radio" name="place" value="restaurant" autocomplete="off"> Diner
+                  </label>
+                    <label class="btn btn-warning border border-dark">
+                    <input type="radio" name="place" value="fast food" autocomplete="off"> Fast Food
+                  </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <br>
+                <label for="">Search within how many metres?</label>
+                <br>
+                <input class="btn btn-warning" required type="number" name="range" id="range" value="1000">
+            </div>
+            <div class="form-group">
+                <label for="">Address</label>
+                <input type="text" name="address" class="btn btn-outline-warning" required value="" placeholder="Los Angeles, CA">
+            </div>
+            <div class="form-group">
+                <input class='btn btn-warning w-75' type="submit" value="Search Now!">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

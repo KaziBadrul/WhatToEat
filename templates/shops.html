@@ -1,0 +1,17 @@
+{% extends 'default.html' %} {%block style%}
+<link rel="stylesheet" href="static/shops.css"> {%endblock style%} {% block content %}
+<h1 class="text-center m-2 p-2">Click on the card you find interesting!</h1>
+{% if shop_list|length
+< 5 %} <h3 class="text-center p-2 bg-btn-outline-warning alert-warning">Location provided doesn't contain enough data</h3>
+    {% endif %}
+<div class="d-flex flex-wrap justify-content-around">
+    {% for shops in shop_list %}
+    <a class="card bg-danger text-white m-2 pt-3 p-2 w-25" href="https://www.google.com/search?q={{shops['name']}} {{address}}">
+        <div class=" ">
+            <h3 class="card-title">{{shops["name"]}}</h3>
+            <small class="card-text">{{shops['distance']}}m away</small>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+     {% endblock content %}
